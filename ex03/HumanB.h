@@ -11,6 +11,7 @@ class HumanB
         Weapon *weapon;
     public:
         HumanB(std::string humanName);
+        HumanB(std::string humanName, Weapon &weaponUsed);
         ~HumanB();
         void attack(void);
         void setWeapon(Weapon &weaponName);
