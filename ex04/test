@@ -1,4 +1,4 @@
-NAME = sed
+main = sed
 CC = c++
 CFLAGS = -std=c++98 -Wall -Werror -Wextra
 
@@ -9,19 +9,27 @@ SRCS =	main.cpp main main
 
 OBJS = ${SRCS:.cpp=.o}
 
-${NAME} :	${OBJS}
-			${CC} ${main} ${OBJS} -o ${NAME}
+${main} :	${OBJS}
+			${CC} ${main} ${OBJS} -o ${main}
 
-all : ${NAME}
+all : ${main}
 
 clean:	
 		${RM} ${OBJS} 
 	
 fclean:	clean
-		${RM} ${NAME}
+		${RM} ${main}
  adasdmainsdasd
-main:main:main
+main:main:kkk
 main:main:main
 main:main:mainCOOL
 
-.PHONY:	all clean fclean re
+.PHONY:	all clean fclean remain
+main
+
+
+
+
+
+
+main

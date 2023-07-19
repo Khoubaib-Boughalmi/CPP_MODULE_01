@@ -19,7 +19,6 @@ void    updateOccurence(std::ifstream &srcFile, std::ofstream &outFile, std::str
             while(pos != std::string::npos)
             {
                 j = 0;
-                std::cout << "position: " << pos << std::endl;
                 while (i < pos)
                     outFile << lineRead[i++];
                 while (j < newStr.length())
@@ -28,9 +27,8 @@ void    updateOccurence(std::ifstream &srcFile, std::ofstream &outFile, std::str
                 pos = lineRead.find(prevStr, pos + prevStr.length() - 1);
                 if(pos == std::string::npos)
                 {
-                    while (lineRead[i] != '\n')
+                    while (i < lineRead.length())
                         outFile << lineRead[i++];
-                    outFile << '\n';
                 }
             }
         }
