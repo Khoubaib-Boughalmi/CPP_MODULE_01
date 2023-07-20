@@ -40,8 +40,13 @@ void    harlFilterSwitch(std::string level)
     }
 }
 
-int main()
+int main(int argc, char *argv[])
 {
-    harlFilterSwitch("DEBUG");
+    if(argc != 2)
+    {
+        std::cout << "[ Probably complaining about insignificant problems ]";
+        return (1);
+    }
+    harlFilterSwitch(std::string(argv[1]));
     return (0);
 }
